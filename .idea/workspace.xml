@@ -54,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flaskr.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="flaskr.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flaskr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="42" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.627451" vertical-offset="843" max-vertical-offset="4500">
+            <state line="69" column="42" selection-start="2202" selection-end="2202" vertical-scroll-proportion="-3.764706" vertical-offset="843" max-vertical-offset="4500">
               <folding>
                 <element signature="e#59#82#0" expanded="true" />
               </folding>
@@ -65,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="270">
+            <state line="4" column="19" selection-start="120" selection-end="120" vertical-scroll-proportion="0.18072289" vertical-offset="0" max-vertical-offset="332">
               <folding />
             </state>
           </provider>
@@ -106,8 +106,8 @@
         <option value="$PROJECT_DIR$/db_create.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/flaskr.py" />
+        <option value="$PROJECT_DIR$/config.py" />
       </list>
     </option>
   </component>
@@ -450,19 +450,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flaskr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="42" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.627451" vertical-offset="843" max-vertical-offset="4500">
+        <state line="69" column="42" selection-start="2202" selection-end="2202" vertical-scroll-proportion="-3.764706" vertical-offset="843" max-vertical-offset="4500">
           <folding>
             <element signature="e#59#82#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="19" selection-start="120" selection-end="120" vertical-scroll-proportion="0.18072289" vertical-offset="0" max-vertical-offset="332">
+          <folding />
         </state>
       </provider>
     </entry>

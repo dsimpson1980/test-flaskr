@@ -1,7 +1,8 @@
 import os
 
 SQLALCHEMY_DATABASE_URI = os.environ["HEROKU_POSTGRESQL_CRIMSON_URL"]
-
+USERNAME = 'mapdes'
+PASSWORD = 'default'
 SQLALCHEMY_ECHO = True
 DEBUG = True
 SECRET_KEY = 'development key'
