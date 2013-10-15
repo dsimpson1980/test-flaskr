@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="layout.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="16" selection-start="158" selection-end="158" vertical-scroll-proportion="0.24193548" vertical-offset="0" max-vertical-offset="375">
+            <state line="5" column="16" selection-start="158" selection-end="158" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
@@ -41,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="requirements.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="17" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+            <state line="8" column="10" selection-start="137" selection-end="137" vertical-scroll-proportion="0.35928145" vertical-offset="0" max-vertical-offset="334">
               <folding />
             </state>
           </provider>
@@ -453,13 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/show_customers.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
@@ -469,7 +462,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="158" selection-end="158" vertical-scroll-proportion="0.24193548" vertical-offset="0" max-vertical-offset="375">
+        <state line="5" column="16" selection-start="158" selection-end="158" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="10" selection-start="137" selection-end="137" vertical-scroll-proportion="0.35928145" vertical-offset="0" max-vertical-offset="334">
           <folding />
         </state>
       </provider>
