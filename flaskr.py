@@ -65,6 +65,15 @@ class Parameter(db.Model):
      __tablename__ = 'run_parameters'
      metadata = meta
 
+class CustomerWithMarket(db.Model):
+    __tablename__ = 'customer_with_market'
+    __table_args__ = {'extend_existing': True,
+                      'autoload': True}
+    metadata = meta
+    customer_id = sa.Column('customer_id',
+                            sa.Integer,
+                            primary_key=True)
+
 def connect_db():
     import urlparse
 
@@ -89,8 +98,7 @@ def teardown_request(exception):
 @app.route('/')
 @app.route('/index/<int:page>')
 def show_customers(page=1):
-    customers = Customer.query.paginate(page, CUSTOMERS_PER_PAGE, False)
-    #customers = CustomerWithMarket.query.paginate(page, CUSTOMERS_PER_PAGE, False)
+    customers = CustomerWithMarket.query.paginate(page, CUSTOMERS_PER_PAGE, False)
     return render_template('show_customers.html', customers=customers)
 
 @app.route('/add_customer', methods=['POST'])
