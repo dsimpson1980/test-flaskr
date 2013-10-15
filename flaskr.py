@@ -1,6 +1,6 @@
 # all the imports
-#import pandas as pd
-#import numpy as np
+import pandas as pd
+import numpy as np
 import sqlalchemy as sa
 from config import *
 
@@ -99,11 +99,11 @@ def add_customer():
                             image64=image64)
     db.session.add(new_customer)
     db.session.commit()
-    #ids = np.array(range(len(demand)))
-    #ids.fill(new_customer.customer_id)
-    #demand_data = pd.DataFrame({'customer_id': 1,
-    #                            'datetime': '01-Sep-13',
-    #                            'value': 1})
+    ids = np.array(range(len(demand)))
+    ids.fill(new_customer.customer_id)
+    demand_data = pd.DataFrame({'customer_id': 1,
+                                'datetime': '01-Sep-13',
+                                'value': 1})
     #demand_buffer = StringIO()
     #demand_data.to_csv(demand_buffer, header=False, index=False)
     #demand_buffer.seek(0)
@@ -136,7 +136,7 @@ def generate_customer_premium(customer_id):
         #customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
         parameters = fetch_run_parameters(customer.market_id)
         run_id = parameters.run_id
-        premium = 1.5 #np.random.rand()
+        premium = np.random.rand()
         new_premium = Premium(customer_id=customer_id,
                               run_id=run_id,
                               valuation_date=valuation_date,
@@ -236,12 +236,12 @@ def generate_random_customer_data():
         randomly generated DataFrame covering 30 days in Sep-13 at daily freq
 
     """
-    #start_date = '01-Sep-13'
-    #end_date = '30-Sep-13'
-    #dates = pd.date_range(start_date, end_date, freq='D')
-    #values = np.random.rand(len(dates))
-    #demand = pd.TimeSeries(values, dates)
-    return 0
+    start_date = '01-Sep-13'
+    end_date = '30-Sep-13'
+    dates = pd.date_range(start_date, end_date, freq='D')
+    values = np.random.rand(len(dates))
+    demand = pd.TimeSeries(values, dates)
+    return demand
 
 def generate_customer_demand_image(demand):
     """Creates a plot and saves it to a string buffer
