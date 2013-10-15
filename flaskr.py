@@ -15,11 +15,6 @@ from wtforms.fields.html5 import DateField
 app = Flask(__name__)
 app.config.from_object(__name__)
 # postgres config
-engine = sa.create_engine(SQLALCHEMY_DATABASE_URI, convert_unicode=True)
-
-meta = sa.MetaData(bind=engine, schema='retail')
-schema = 'retail'
-meta.reflect(bind=engine, schema=schema)
 db = SQLAlchemy(app)
 
 class Market(db.Model):
