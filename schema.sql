@@ -8,6 +8,9 @@ DROP TABLE IF EXISTS retail.customers;
 DROP SEQUENCE IF EXISTS retail.customer_ids_sequence;
 DROP TABLE IF EXISTS retail.markets;
 DROP SEQUENCE IF EXISTS retail.market_ids_sequence;
+DROP SCHEMA IF EXISTS retail;
+
+CREATE SCHEMA retail;
 
 CREATE SEQUENCE retail.market_ids_sequence;
 CREATE TABLE retail.markets
