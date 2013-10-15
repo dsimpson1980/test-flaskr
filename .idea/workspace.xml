@@ -23,15 +23,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="layout.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="7" selection-start="52" selection-end="52" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="375">
-              <folding>
-                <marker date="1381824337000" expanded="true" signature="43:51" placeholder="..." />
-                <marker date="1381824337000" expanded="true" signature="157:510" placeholder="..." />
-                <marker date="1381824337000" expanded="true" signature="197:368" placeholder="..." />
-              </folding>
+            <state line="5" column="16" selection-start="158" selection-end="158" vertical-scroll-proportion="0.24193548" vertical-offset="0" max-vertical-offset="375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_customers.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/show_customers.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="630">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -39,7 +44,7 @@
       <file leaf-file-name="requirements.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="16" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+            <state line="8" column="17" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
               <folding />
             </state>
           </provider>
@@ -65,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="19" selection-start="120" selection-end="120" vertical-scroll-proportion="0.18072289" vertical-offset="0" max-vertical-offset="332">
+            <state line="4" column="19" selection-start="120" selection-end="120" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
@@ -104,10 +109,10 @@
       <list>
         <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/db_create.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/flaskr.py" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -411,17 +416,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="52" selection-end="52" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="375">
-          <folding>
-            <marker date="1381824337000" expanded="true" signature="43:51" placeholder="..." />
-            <marker date="1381824337000" expanded="true" signature="157:510" placeholder="..." />
-            <marker date="1381824337000" expanded="true" signature="197:368" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runp-heroku.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
@@ -443,13 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flaskr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="42" selection-start="2202" selection-end="2202" vertical-scroll-proportion="-3.764706" vertical-offset="843" max-vertical-offset="4500">
@@ -461,7 +448,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="120" selection-end="120" vertical-scroll-proportion="0.18072289" vertical-offset="0" max-vertical-offset="332">
+        <state line="4" column="19" selection-start="120" selection-end="120" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="17" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_customers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="16" selection-start="158" selection-end="158" vertical-scroll-proportion="0.24193548" vertical-offset="0" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
