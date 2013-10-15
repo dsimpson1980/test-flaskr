@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block body %}
+    <ul class=customer_meta_data>
+        <table class="table table-striped">
+            <tr><th>Name</th><th>Customer ID</th><th>Market</th></tr>
+            <tr>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.customer_id }}</td>
+                <td>{{ customer.market_name }}</td>
+            </tr>
+        </table>
+    </ul>
+    <form action={{ url_for('show_customers') }}>
+        <input type="submit" value="Return to customer list">
+    </form>
+    <form action={{ url_for('display_customer_premiums',
+                          customer_id=customer.customer_id) }}>
+        <input type="submit" value="Display premiums">
+    </form>
+    <form action={{ url_for('generate_customer_premium',
+                          customer_id=customer.customer_id) }}>
+        <input type="submit" value="Generate premium">
+    </form>
+    <ul class="customer_demand_image">
+    <img src="data:image/png;base64,{{ customer.image64 }}" width="100%">
+    </ul>
+    <ul class=customer_demand>
+        <table class="table table-striped">
+            <tr><th>Datetime UTC</th><th>Value</th></tr>
+            <!-- customer_demand is a pagination object -->
+            {% for demand_row in customer_demand.items %}
+                <tr>
+                    <td>{{ demand_row.datetime }}</td>
+                    <td>{{ demand_row.value}}</td>
+                </tr>
+            {% endfor %}
+                {% if customer_demand.has_prev %}
+                <a href="{{ url_for('display_customer',
+                                    customer_id=customer.customer_id,
+                                    page = customer_demand.prev_num) }}"><< Last Page</a>
+            {% else %}
+                << Last Page
+            {% endif %}
+            {% if customer_demand.has_next %}
+                <a href="{{ url_for('display_customer',
+                                    customer_id=customer.customer_id,
+                                    page = customer_demand.next_num) }}">Next Page >></a>
+            {% else %}
+                Next Page >>
+            {% endif %}
+        </table>
+    </ul>
+{% endblock %}

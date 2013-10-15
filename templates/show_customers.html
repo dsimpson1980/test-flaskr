@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_customer') }}" method=post class=add-customer>
+      <dl>
+        <dt>Name:
+        <dd><input type=text size=30 name=name>
+        <dt>Market:
+        <dd><input type=text size=30 name=market>
+        <dd><input type=submit value=Add>
+      </dl>
+    </form>
+  {% endif %}
+  <ul class=customers>
+  <table class="table table-striped">
+        <tr><th>Name</th><th>Customer ID</th><th>Market</th></tr>
+        <!-- customers is a pagination object -->
+        {% for customer in customers.items %}
+            <tr>
+                <td><a href={{ url_for('display_customer', customer_id=customer.customer_id) }}>{{ customer.name }}</a></td>
+                <td><a href={{ url_for('display_customer', customer_id=customer.customer_id) }}>{{ customer.customer_id }}</a></td>
+                <td>{{ customer.market_name }}</td>
+            </tr>
+        {% endfor %}
+        {% if customers.has_prev %}
+            <a href="{{ url_for('show_customers', page = customers.prev_num) }}"><< Newer customers</a>
+        {% else %}
+            << Newer customers
+        {% endif %}
+        {% if customers.has_next %}
+            <a href="{{ url_for('show_customers', page = customers.next_num) }}">Older customers >></a>
+        {% else %}
+            Older customers >>
+        {% endif %}
+  </table>
+  </ul>
+{% endblock %}

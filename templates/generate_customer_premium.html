@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class=customer_meta_data>
+      <table class="table table-striped">
+        <tr><th>Name</th><th>Customer ID</th><th>Market</th></tr>
+        <tr>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.customer_id }}</td>
+            <td>{{ customer.market }}</td>
+        </tr>
+      </table>
+  </ul>
+  <ul class="premium_parameters">
+      {% from "_formhelpers.html" import render_field %}
+      <form method=post action={{ url_for('generate_customer_premium',
+                                          customer_id=customer.customer_id) }}>
+        <dl>
+            {{ render_field(form.contract_start) }}
+            {{ render_field(form.contract12) }}
+            {{ render_field(form.contract24) }}
+            {{ render_field(form.contract36) }}
+            {{ render_field(form.email) }}
+        </dl>
+          <p><input type=submit value="Generate Premium">
+      </form>
+      <form action={{ url_for('display_customer',
+                              customer_id=customer.customer_id) }}>
+          <input type="submit" value="Cancel">
+      </form>
+  </ul>
+{% endblock %}

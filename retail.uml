@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>5c2850af-7cce-491a-84cd-f0cc0451282b.schema:flaskr.retail</OriginalElement>
+  <nodes>
+    <node x="218.0" y="338.0">5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.premiums</node>
+    <node x="188.125" y="0.0">5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.markets</node>
+    <node x="0.0" y="568.0">5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.market_ids_sequence</node>
+    <node x="560.25" y="0.0">5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.parameter_ids_sequence</node>
+    <node x="0.0" y="382.0">5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.customer_demand</node>
+    <node x="418.0" y="568.0">5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.premium_ids_sequence</node>
+    <node x="336.25" y="169.0">5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.run_parameters</node>
+    <node x="0.0" y="863.0">5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.customer_ids_sequence</node>
+    <node x="44.5" y="169.0">5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.customers</node>
+    <node x="418.0" y="863.0">5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.customer_with_market</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.premiums" target="5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.customers">
+      <point x="-69.25" y="-92.5" />
+      <point x="287.25" y="313.0" />
+      <point x="208.0" y="313.0" />
+      <point x="54.5" y="59.5" />
+    </edge>
+    <edge source="5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.premiums" target="5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.run_parameters">
+      <point x="69.25" y="-92.5" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.customer_demand" target="5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.customers">
+      <point x="0.0" y="-48.5" />
+      <point x="-54.5" y="59.5" />
+    </edge>
+    <edge source="5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.run_parameters" target="5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.markets">
+      <point x="0.0" y="-59.5" />
+      <point x="425.75" y="144.0" />
+      <point x="340.375" y="144.0" />
+      <point x="50.75" y="59.5" />
+    </edge>
+    <edge source="5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.customers" target="5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.markets">
+      <point x="0.0" y="-59.5" />
+      <point x="153.5" y="144.0" />
+      <point x="238.875" y="144.0" />
+      <point x="-50.75" y="59.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.3406884377758164" x="467.0" y="556.5" />
+  <SelectedNodes>
+    <node>5c2850af-7cce-491a-84cd-f0cc0451282b.table:flaskr.retail.customers</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+

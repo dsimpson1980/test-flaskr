@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block body %}
+    <ul class=customer_meta_data>
+        <table class="table table-striped">
+            <tr><th>Name</th><th>Customer ID</th><th>Market</th></tr>
+            <tr>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.customer_id }}</td>
+                <td>{{ customer.market_name }}</td>
+            </tr>
+        </table>
+    </ul>
+    <form action={{ url_for('show_customers') }}>
+        <input type="submit" value="Return to customer list">
+    </form>
+    <form action={{ url_for('generate_customer_premium',
+                          customer_id=customer.customer_id) }}>
+        <input type="submit" value="Generate premium">
+    </form>
+    <ul class=customer_demand>
+        <table class="table table-striped">
+            <tr><th>Premium ID</th><th>Run ID</th><th>Start Date</th><th>End Date</th><th>Premium</th></tr>
+            <!-- premiums is a pagination object -->
+            {% for premium in premiums.items %}
+                <tr>
+                    <td>{{ premium.premium_id }}</td>
+                    <td>{{ premium.run_id}}</td>
+                    <td>{{ premium.contract_start_date_utc }}</td>
+                    <td>{{ premium.contract_end_date_utc }}</td>
+                    <td>{{ premium.premium}}</td>
+                </tr>
+            {% endfor %}
+            {% if premiums.has_prev %}
+                <a href="{{ url_for('display_customer_premiums',
+                                    customer_id = customer.customer_id,
+                                    page = premiums.prev_num) }}"><< Next Page</a>
+            {% else %}
+                << Next Page
+            {% endif %}
+            {% if premiums.has_next %}
+                <a href="{{ url_for('display_customer_premiums',
+                                    customer_id = customer.customer_id,
+                                    page = premiums.next_num) }}">Last Page >></a>
+            {% else %}
+                Last Page >>
+            {% endif %}
+        </table>
+    </ul>
+{% endblock %}
