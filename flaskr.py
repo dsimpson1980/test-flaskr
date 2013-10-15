@@ -114,14 +114,15 @@ def add_customer():
 @app.route('/generate_customer_premium/<int:customer_id>', methods=['GET', 'POST'])
 def generate_customer_premium(customer_id):
     from datetime import datetime
-    from dateutil.relativedelta import relativedelta
+    #from dateutil.relativedelta import relativedelta
     if not session.get('logged_in'):
         abort(401)
     form = premium_parameters_form(request.form)
     if request.method == "POST" and form.validate():
         contract_end = []
         if form.contract12:
-            contract_end.append(form.contract_start.data + relativedelta(months=12+1, days=-1))
+            #contract_end.append(form.contract_start.data + relativedelta(months=12+1, days=-1))
+            contract_end.append(form.contract_start.data)
         #if form.contract24:
         #    contract_end.append(form.contract_start + relativedelta(months=12*2+1, days=-1))
         #if form.contract36:
