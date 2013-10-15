@@ -4,7 +4,6 @@ import urlparse
 urlparse.uses_netloc.append("postgres")
 
 SQLALCHEMY_DATABASE_URI = urlparse.urlparse(os.environ["HEROKU_POSTGRESQL_CRIMSON_URL"])
-SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 SQLALCHEMY_ECHO = True
 DEBUG = True
 SECRET_KEY = 'development key'
