@@ -131,23 +131,21 @@ def add_customer():
 @app.route('/generate_customer_premium/<int:customer_id>', methods=['GET', 'POST'])
 def generate_customer_premium(customer_id):
     from datetime import datetime
-    #from dateutil.relativedelta import relativedelta
+    from dateutil.relativedelta import relativedelta
     if not session.get('logged_in'):
         abort(401)
     form = premium_parameters_form(request.form)
     if request.method == "POST" and form.validate():
         contract_end = []
         if form.contract12:
-            #contract_end.append(form.contract_start.data + relativedelta(months=12+1, days=-1))
-            contract_end.append(form.contract_start.data)
+            contract_end.append(form.contract_start.data + relativedelta(months=12+1, days=-1))
         #if form.contract24:
         #    contract_end.append(form.contract_start + relativedelta(months=12*2+1, days=-1))
         #if form.contract36:
         #    contract_end.append(form.contract_start + relativedelta(months=12*3+1, days=-1))
         contract_start = [form.contract_start for x in range(len(contract_end))]
         valuation_date = datetime.today()
-        customer = Customer.query.filter(Customer.customer_id==customer_id).one()
-        #customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
+        customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
         parameters = fetch_run_parameters(customer.market_id)
         run_id = parameters.run_id
         premium = np.random.rand()
@@ -168,9 +166,8 @@ def generate_customer_premium(customer_id):
 
 class premium_parameters_form(Form):
     from datetime import datetime
-    #from dateutil.relativedelta import relativedelta
-    #default_start = datetime.today() + relativedelta(months=1, day=1)
-    default_start = datetime.today()
+    from dateutil.relativedelta import relativedelta
+    default_start = datetime.today() + relativedelta(months=1, day=1)
     contract_start = DateField(label="contract_start",
                                default=default_start)
     #choices = [(None, '0')] + [(x, str(x)) for x in range(1,36)]
@@ -187,8 +184,7 @@ class premium_parameters_form(Form):
 def display_customer_premiums(customer_id, page=1):
     if not session.get('logged_in'):
         abort(401)
-    #customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
-    customer = Customer.query.filter(Customer.customer_id==customer_id).one()
+    customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
     premiums = Premium.query.filter(Premium.customer_id==customer_id)
     premiums = premiums.paginate(page, PREMIUMS_PER_PAGE, False)
     return render_template('display_customer_premiums.html',
@@ -200,11 +196,9 @@ def display_customer_premiums(customer_id, page=1):
 def display_customer(customer_id, page=1):
     if not session.get('logged_in'):
         abort(401)
-    #customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
-    #customer_demand = CustomerDemand.query.filter(CustomerDemand.customer_id==customer_id)
-    #customer_demand = customer_demand.paginate(page, DEMAND_ITEMS_PER_PAGE, False)
-    customer = Customer.query.filter(Customer.customer_id==customer_id).one()
-    customer_demand = 0
+    customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
+    customer_demand = CustomerDemand.query.filter(CustomerDemand.customer_id==customer_id)
+    customer_demand = customer_demand.paginate(page, DEMAND_ITEMS_PER_PAGE, False)
     return render_template('display_customer.html',
                            customer_demand=customer_demand,
                            customer=customer)
