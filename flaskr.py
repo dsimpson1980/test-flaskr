@@ -108,16 +108,15 @@ def add_customer():
     db.session.commit()
     ids = np.array(range(len(demand)))
     ids.fill(new_customer.customer_id)
-    demand_data = pd.DataFrame({'customer_id': 1,
-                                'datetime': '01-Sep-13',
-                                'value': 1})
-    #demand_buffer = StringIO()
-    #demand_data.to_csv(demand_buffer, header=False, index=False)
-    #demand_buffer.seek(0)
-    #cur = engine.raw_connection().cursor()
-    #cur.copy_from(demand_buffer, 'retail.customer_demand', sep=',')
-    #cur.connection.commit()
-    # add push to db demand table here
+    demand_data = pd.DataFrame({'customer_id': ids,
+                                'datetime': demand.index,
+                                'value': demand.values})
+    demand_buffer = StringIO()
+    demand_data.to_csv(demand_buffer, header=False, index=False)
+    demand_buffer.seek(0)
+    cur = engine.raw_connection().cursor()
+    cur.copy_from(demand_buffer, 'retail.customer_demand', sep=',')
+    cur.connection.commit()
     flash('New customer was successfully added')
     return redirect(url_for('show_customers'))
 

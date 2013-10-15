@@ -1,4 +1,3 @@
-CREATE SCHEMA retail;
 DROP TABLE IF EXISTS retail.premiums;
 DROP SEQUENCE IF EXISTS retail.premium_ids_sequence;
 DROP TABLE IF EXISTS retail.run_parameters;

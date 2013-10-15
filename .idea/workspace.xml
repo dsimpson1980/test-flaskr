@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flaskr.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="flaskr.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flaskr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="23" selection-start="1635" selection-end="1635" vertical-scroll-proportion="-28.2" vertical-offset="0" max-vertical-offset="4605">
+            <state line="107" column="23" selection-start="3357" selection-end="3357" vertical-scroll-proportion="0.5339806" vertical-offset="1440" max-vertical-offset="4590">
               <folding>
                 <element signature="e#18#37#0" expanded="true" />
               </folding>
@@ -72,13 +72,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schema.sql" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="schema.sql" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/schema.sql">
           <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="518" selection-end="518" vertical-scroll-proportion="0.7003891" vertical-offset="0" max-vertical-offset="1185">
+            <state line="22" column="0" selection-start="781" selection-end="781" vertical-scroll-proportion="-2.5324676" vertical-offset="135" max-vertical-offset="1170">
               <folding />
             </state>
           </provider>
@@ -126,8 +126,8 @@
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/db_create.py" />
-        <option value="$PROJECT_DIR$/flaskr.py" />
         <option value="$PROJECT_DIR$/schema.sql" />
+        <option value="$PROJECT_DIR$/flaskr.py" />
       </list>
     </option>
   </component>
@@ -482,22 +482,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flaskr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="23" selection-start="1635" selection-end="1635" vertical-scroll-proportion="-28.2" vertical-offset="0" max-vertical-offset="4605">
-          <folding>
-            <element signature="e#18#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/schema.sql">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="518" selection-end="518" vertical-scroll-proportion="0.7003891" vertical-offset="0" max-vertical-offset="1185">
+        <state line="22" column="0" selection-start="781" selection-end="781" vertical-scroll-proportion="-2.5324676" vertical-offset="135" max-vertical-offset="1170">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flaskr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="23" selection-start="3357" selection-end="3357" vertical-scroll-proportion="0.5339806" vertical-offset="1440" max-vertical-offset="4590">
+          <folding>
+            <element signature="e#18#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
