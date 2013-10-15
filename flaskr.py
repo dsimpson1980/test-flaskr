@@ -59,7 +59,10 @@ class Parameter(db.Model):
 #     metadata = meta
 
 def connect_db():
-    url = SQLALCHEMY_DATABASE_URI
+    import urlparse
+
+    urlparse.uses_netloc.append("postgres")
+    url = urlparse.urlparse(SQLALCHEMY_DATABASE_URI)
     return psycopg2.connect(database=url.path[1:],
                             user=url.username,
                             password=url.password,

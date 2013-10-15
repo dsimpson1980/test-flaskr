@@ -1,7 +1,4 @@
 import os
-import urlparse
-
-urlparse.uses_netloc.append("postgres")
 
 SQLALCHEMY_DATABASE_URI = os.environ["HEROKU_POSTGRESQL_CRIMSON_URL"]
 
