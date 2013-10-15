@@ -52,7 +52,12 @@ class CustomerWithMarket(db.Model):
                             primary_key=True)
 
 def connect_db():
-    return engine.connect()
+    url = SQLALCHEMY_DATABASE_URI
+    return psycopg2.connect(database=url.path[1:],
+                            user=url.username,
+                            password=url.password,
+                            host=url.hostname,
+                            port=url.port)
 
 @app.before_request
 def before_request():

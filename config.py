@@ -1,10 +1,10 @@
 import os
+import urlparse
 
-DATABASE = HEROKU_POSTGRESQL_CRIMSON_URL
-HOST = 'localhost'
-USERNAME = 'mapdes'
-PASSWORD = 'default'
-SQLALCHEMY_DATABASE_URI = 'postgres://%s:%s@%s/%s' % (USERNAME, PASSWORD, HOST, DATABASE)
+urlparse.uses_netloc.append("postgres")
+url = urlparse.urlparse(os.environ["DATABASE_URL"])
+
+SQLALCHEMY_DATABASE_URI = urlparse.urlparse(os.environ["DATABASE_URL"])
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 SQLALCHEMY_ECHO = True
 DEBUG = True
