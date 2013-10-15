@@ -1,2 +1,4 @@
 requests
 gunicorn==0.17.2
+SQLAlchemy==0.8.2
+Flask-SQLAlchemy==1.0
