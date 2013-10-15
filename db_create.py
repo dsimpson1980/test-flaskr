@@ -1,1 +1,2 @@
-__author__ = 'davidsimpson1'
+from flaskr import db
+db.create_all()
