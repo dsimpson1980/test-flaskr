@@ -53,8 +53,10 @@
       <file leaf-file-name="db_create.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db_create.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="120">
-              <folding />
+            <state line="6" column="13" selection-start="186" selection-end="186" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="180">
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,7 +64,7 @@
       <file leaf-file-name="flaskr.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flaskr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="20" selection-start="3305" selection-end="3305" vertical-scroll-proportion="0.38867924" vertical-offset="1457" max-vertical-offset="4500">
+            <state line="47" column="23" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.61165047" vertical-offset="516" max-vertical-offset="4605">
               <folding>
                 <element signature="e#18#37#0" expanded="true" />
               </folding>
@@ -108,10 +110,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/templates/layout.html" />
-        <option value="$PROJECT_DIR$/db_create.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/db_create.py" />
         <option value="$PROJECT_DIR$/flaskr.py" />
       </list>
     </option>
@@ -423,13 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db_create.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="120">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="25" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
@@ -465,9 +460,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db_create.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="186" selection-end="186" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="180">
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/flaskr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="20" selection-start="3305" selection-end="3305" vertical-scroll-proportion="0.38867924" vertical-offset="1457" max-vertical-offset="4500">
+        <state line="47" column="23" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.61165047" vertical-offset="516" max-vertical-offset="4605">
           <folding>
             <element signature="e#18#37#0" expanded="true" />
           </folding>

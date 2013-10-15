@@ -18,45 +18,52 @@ app.config.from_object(__name__)
 # postgres config
 db = SQLAlchemy(app)
 
+#class Customer(db.Model):
+#    customer_id = db.Column(db.Integer, primary_key = True)
+#    name = db.Column(db.String(64), index = True, unique = True)
+#    market_id = db.Column(db.Integer, index = True, unique = True)
+#
+#class Premium(db.Model):
+#    premium_id = db.Column(db.Integer, primary_key = True)
+#    customer_id = db.Column(db.Integer, index = True)
+#    run_id = db.Column(db.Integer, index = True)
+#    valuation_date = db.Column(db.DateTime, index = True)
+#    contract_start_date_utc = db.Column(db.DateTime, index = True)
+#    contract_end_date_utc = db.Column(db.DateTime, index = True)
+#    premium = db.Column(db.Float, index = True)
+#
+#class Parameter(db.Model):
+#    run_id = db.Column(db.Integer, primary_key = True)
+#    market_id = db.Column(db.Integer, index = True)
+#    parameters = db.Column(db.Integer, index = True)
+#    db_upload_date = db.Column(db.DateTime, index = True)
+
+engine = sa.create_engine(SQLALCHEMY_DATABASE_URI, convert_unicode=True)
+
+meta = sa.MetaData(bind=engine, schema='retail')
+schema = 'retail'
+meta.reflect(bind=engine, schema=schema)
+db = SQLAlchemy(app)
+
+class Market(db.Model):
+     __tablename__ = 'markets'
+     metadata = meta
+
 class Customer(db.Model):
-    customer_id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(64), index = True, unique = True)
-    market_id = db.Column(db.Integer, index = True, unique = True)
+    __tablename__ = 'customers'
+    metadata = meta
 
 class Premium(db.Model):
-    premium_id = db.Column(db.Integer, primary_key = True)
-    customer_id = db.Column(db.Integer, index = True)
-    run_id = db.Column(db.Integer, index = True)
-    valuation_date = db.Column(db.DateTime, index = True)
-    contract_start_date_utc = db.Column(db.DateTime, index = True)
-    contract_end_date_utc = db.Column(db.DateTime, index = True)
-    premium = db.Column(db.Float, index = True)
+     __tablename__ = 'premiums'
+     metadata = meta
+
+class CustomerDemand(db.Model):
+     __tablename__ = 'customer_demand'
+     metadata = meta
 
 class Parameter(db.Model):
-    run_id = db.Column(db.Integer, primary_key = True)
-    market_id = db.Column(db.Integer, index = True)
-    parameters = db.Column(db.Integer, index = True)
-    db_upload_date = db.Column(db.DateTime, index = True)
-
-# class Market(db.Model):
-#     __tablename__ = 'markets'
-#     metadata = meta
-
-# class Customer(db.Model):
-    # __tablename__ = 'customers'
-    # metadata = meta
-
-# class Premium(db.Model):
-#     __tablename__ = 'premiums'
-#     metadata = meta
-
-# class CustomerDemand(db.Model):
-#     __tablename__ = 'customer_demand'
-#     metadata = meta
-
-# class Parameter(db.Model):
-#     __tablename__ = 'run_parameters'
-#     metadata = meta
+     __tablename__ = 'run_parameters'
+     metadata = meta
 
 def connect_db():
     import urlparse
