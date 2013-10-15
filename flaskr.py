@@ -99,6 +99,7 @@ def teardown_request(exception):
 @app.route('/index/<int:page>')
 def show_customers(page=1):
     customers = CustomerWithMarket.query.paginate(page, CUSTOMERS_PER_PAGE, False)
+    markets = Market.query.all()
     return render_template('show_customers.html',
                            customers=customers,
                            markets=markets)
