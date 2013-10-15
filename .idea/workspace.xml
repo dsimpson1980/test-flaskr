@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="layout.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="16" selection-start="158" selection-end="158" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="375">
+            <state line="3" column="2" selection-start="47" selection-end="47" vertical-scroll-proportion="0.14516129" vertical-offset="0" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flaskr.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="flaskr.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flaskr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="23" selection-start="3357" selection-end="3357" vertical-scroll-proportion="0.5339806" vertical-offset="1440" max-vertical-offset="4590">
+            <state line="107" column="23" selection-start="3357" selection-end="3357" vertical-scroll-proportion="-6.6" vertical-offset="1440" max-vertical-offset="4590">
               <folding>
                 <element signature="e#18#37#0" expanded="true" />
               </folding>
@@ -121,13 +121,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/db_create.py" />
         <option value="$PROJECT_DIR$/schema.sql" />
         <option value="$PROJECT_DIR$/flaskr.py" />
+        <option value="$PROJECT_DIR$/templates/layout.html" />
       </list>
     </option>
   </component>
@@ -452,13 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="158" selection-end="158" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="19" selection-start="120" selection-end="120" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="285">
@@ -494,10 +487,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flaskr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="23" selection-start="3357" selection-end="3357" vertical-scroll-proportion="0.5339806" vertical-offset="1440" max-vertical-offset="4590">
+        <state line="107" column="23" selection-start="3357" selection-end="3357" vertical-scroll-proportion="-6.6" vertical-offset="1440" max-vertical-offset="4590">
           <folding>
             <element signature="e#18#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="2" selection-start="47" selection-end="47" vertical-scroll-proportion="0.14516129" vertical-offset="0" max-vertical-offset="390">
+          <folding />
         </state>
       </provider>
     </entry>
