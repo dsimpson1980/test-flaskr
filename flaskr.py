@@ -11,40 +11,52 @@ from contextlib import closing
 
 from wtforms import Form, validators, TextField, BooleanField
 from wtforms.fields.html5 import DateField
+import psycopg2
 
 app = Flask(__name__)
 app.config.from_object(__name__)
 # postgres config
 db = SQLAlchemy(app)
 
-class Market(db.Model):
-    __tablename__ = 'markets'
-    metadata = meta
-
 class Customer(db.Model):
-    __tablename__ = 'customers'
-    metadata = meta
+    customer_id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String(64), index = True, unique = True)
+    market_id = db.Column(db.Integer, index = True, unique = True)
 
 class Premium(db.Model):
-    __tablename__ = 'premiums'
-    metadata = meta
-
-class CustomerDemand(db.Model):
-    __tablename__ = 'customer_demand'
-    metadata = meta
+    premium_id = db.Column(db.Integer, primary_key = True)
+    customer_id = db.Column(db.Integer, index = True)
+    run_id = db.Column(db.Integer, index = True)
+    valuation_date = db.Column(db.DateTime, index = True)
+    contract_start_date_utc = db.Column(db.DateTime, index = True)
+    contract_end_date_utc = db.Column(db.DateTime, index = True)
+    premium = db.Column(db.Float, index = True)
 
 class Parameter(db.Model):
-    __tablename__ = 'run_parameters'
-    metadata = meta
+    run_id = db.Column(db.Integer, primary_key = True)
+    market_id = db.Column(db.Integer, index = True)
+    parameters = db.Column(db.Integer, index = True)
+    db_upload_date = db.Column(db.DateTime, index = True)
 
-class CustomerWithMarket(db.Model):
-    __tablename__ = 'customer_with_market'
-    __table_args__ = {'extend_existing': True,
-                      'autoload': True}
-    metadata = meta
-    customer_id = sa.Column('customer_id',
-                            sa.Integer,
-                            primary_key=True)
+# class Market(db.Model):
+#     __tablename__ = 'markets'
+#     metadata = meta
+
+# class Customer(db.Model):
+    # __tablename__ = 'customers'
+    # metadata = meta
+
+# class Premium(db.Model):
+#     __tablename__ = 'premiums'
+#     metadata = meta
+
+# class CustomerDemand(db.Model):
+#     __tablename__ = 'customer_demand'
+#     metadata = meta
+
+# class Parameter(db.Model):
+#     __tablename__ = 'run_parameters'
+#     metadata = meta
 
 def connect_db():
     url = SQLALCHEMY_DATABASE_URI
@@ -67,7 +79,8 @@ def teardown_request(exception):
 @app.route('/')
 @app.route('/index/<int:page>')
 def show_customers(page=1):
-    customers = CustomerWithMarket.query.paginate(page, CUSTOMERS_PER_PAGE, False)
+    customers = Customer.query.paginate(page, CUSTOMERS_PER_PAGE, False)
+    #customers = CustomerWithMarket.query.paginate(page, CUSTOMERS_PER_PAGE, False)
     return render_template('show_customers.html', customers=customers)
 
 @app.route('/add_customer', methods=['POST'])
@@ -115,7 +128,8 @@ def generate_customer_premium(customer_id):
         #    contract_end.append(form.contract_start + relativedelta(months=12*3+1, days=-1))
         contract_start = [form.contract_start for x in range(len(contract_end))]
         valuation_date = datetime.today()
-        customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
+        customer = Customer.query.filter(Customer.customer_id==customer_id).one()
+        #customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
         parameters = fetch_run_parameters(customer.market_id)
         run_id = parameters.run_id
         premium = 1.5 #np.random.rand()
@@ -154,7 +168,8 @@ class premium_parameters_form(Form):
 def display_customer_premiums(customer_id, page=1):
     if not session.get('logged_in'):
         abort(401)
-    customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
+    #customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
+    customer = Customer.query.filter(Customer.customer_id==customer_id).one()
     premiums = Premium.query.filter(Premium.customer_id==customer_id)
     premiums = premiums.paginate(page, PREMIUMS_PER_PAGE, False)
     return render_template('display_customer_premiums.html',
@@ -166,9 +181,11 @@ def display_customer_premiums(customer_id, page=1):
 def display_customer(customer_id, page=1):
     if not session.get('logged_in'):
         abort(401)
-    customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
-    customer_demand = CustomerDemand.query.filter(CustomerDemand.customer_id==customer_id)
-    customer_demand = customer_demand.paginate(page, DEMAND_ITEMS_PER_PAGE, False)
+    #customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
+    #customer_demand = CustomerDemand.query.filter(CustomerDemand.customer_id==customer_id)
+    #customer_demand = customer_demand.paginate(page, DEMAND_ITEMS_PER_PAGE, False)
+    customer = Customer.query.filter(Customer.customer_id==customer_id).one()
+    customer_demand = 0
     return render_template('display_customer.html',
                            customer_demand=customer_demand,
                            customer=customer)
