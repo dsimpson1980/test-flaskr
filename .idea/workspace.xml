@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6fab7ce-93e2-4c76-b7cb-fdb8dae4c9bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flaskr.py" afterPath="$PROJECT_DIR$/flaskr.py" />
-    </list>
+    <list default="true" id="a6fab7ce-93e2-4c76-b7cb-fdb8dae4c9bd" name="Default" comment="" />
     <ignored path="test_flaskr.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,7 +55,7 @@
       <file leaf-file-name="flaskr.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flaskr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="45" selection-start="7463" selection-end="7463" vertical-scroll-proportion="0.5430862" vertical-offset="2399" max-vertical-offset="4440">
+            <state line="120" column="17" selection-start="3805" selection-end="3805" vertical-scroll-proportion="0.3026052" vertical-offset="1469" max-vertical-offset="4440">
               <folding />
             </state>
           </provider>
@@ -545,7 +543,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flaskr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="45" selection-start="7463" selection-end="7463" vertical-scroll-proportion="0.5430862" vertical-offset="2399" max-vertical-offset="4440">
+        <state line="120" column="17" selection-start="3805" selection-end="3805" vertical-scroll-proportion="0.3026052" vertical-offset="1469" max-vertical-offset="4440">
           <folding />
         </state>
       </provider>

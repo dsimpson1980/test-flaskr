@@ -59,6 +59,10 @@ CREATE TABLE retail.run_parameters
 );
 
 INSERT INTO retail.run_parameters VALUES(1, 1, 'd', '01-Sep-13');
+INSERT INTO retail.markets VALUES(2, 'pegnord', 'FR', 'gas');
+INSERT INTO retail.markets VALUES(3, 'pegsud', 'FR', 'gas');
+INSERT INTO retail.markets VALUES(4, 'tigf', 'FR', 'gas');
+INSERT INTO retail.markets VALUES(5, 'ttf', 'NL', 'gas');
 
 CREATE SEQUENCE retail.premium_ids_sequence;
 CREATE TABLE retail.premiums
