@@ -99,7 +99,9 @@ def teardown_request(exception):
 @app.route('/index/<int:page>')
 def show_customers(page=1):
     customers = CustomerWithMarket.query.paginate(page, CUSTOMERS_PER_PAGE, False)
-    return render_template('show_customers.html', customers=customers)
+    return render_template('show_customers.html',
+                           customers=customers,
+                           markets=markets)
 
 @app.route('/add_customer', methods=['POST'])
 def add_customer():
@@ -110,7 +112,7 @@ def add_customer():
     image64 = generate_customer_demand_image(demand)
 
     new_customer = Customer(name=request.form['name'],
-                            market_id=1,
+                            market_id=request.form['market_id'],
                             image64=image64)
     db.session.add(new_customer)
     db.session.commit()

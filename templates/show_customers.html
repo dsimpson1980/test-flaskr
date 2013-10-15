@@ -6,7 +6,11 @@
         <dt>Name:
         <dd><input type=text size=30 name=name>
         <dt>Market:
-        <dd><input type=text size=30 name=market>
+        <dd><select name=market_id>
+          {% for market in markets %}
+            <option value={{ market.market_id }}>{{ market.market_name }}</option>
+          {% endfor %}
+          </select>
         <dd><input type=submit value=Add>
       </dl>
     </form>
