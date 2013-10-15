@@ -1,1 +1,2 @@
 requests
+gunicorn==0.17.2
