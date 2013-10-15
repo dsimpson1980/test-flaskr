@@ -184,7 +184,7 @@ class premium_parameters_form(Form):
 def display_customer_premiums(customer_id, page=1):
     if not session.get('logged_in'):
         abort(401)
-    customer = CustomerWithMarket.query.filter(Customer.customer_id==customer_id).one()
+    customer = CustomerWithMarket.query.filter(CustomerWithMarket.customer_id==customer_id).one()
     premiums = Premium.query.filter(Premium.customer_id==customer_id)
     premiums = premiums.paginate(page, PREMIUMS_PER_PAGE, False)
     return render_template('display_customer_premiums.html',
