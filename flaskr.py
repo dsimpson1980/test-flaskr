@@ -151,8 +151,9 @@ def generate_customer_premium(customer_id):
 
 class premium_parameters_form(Form):
     from datetime import datetime
-    from dateutil.relativedelta import relativedelta
-    default_start = datetime.today() + relativedelta(months=1, day=1)
+    #from dateutil.relativedelta import relativedelta
+    #default_start = datetime.today() + relativedelta(months=1, day=1)
+    default_start = datetime.today()
     contract_start = DateField(label="contract_start",
                                default=default_start)
     #choices = [(None, '0')] + [(x, str(x)) for x in range(1,36)]
